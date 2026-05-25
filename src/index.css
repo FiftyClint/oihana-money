@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+/* iOS notch / dynamic island safe-area when launched from Home Screen */
+body {
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+/* Prevent iOS Safari from zooming on input focus */
+@media (max-width: 768px) {
+  input,
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+}
+
+.btn {
+  @apply inline-flex items-center justify-center rounded-xl px-4 py-3 font-medium transition select-none active:scale-95;
+}
+.btn-primary {
+  @apply btn bg-slate-900 text-white hover:bg-slate-800;
+}
+.btn-secondary {
+  @apply btn bg-white border border-slate-200 text-slate-900 hover:bg-slate-100;
+}
+.btn-ghost {
+  @apply btn text-slate-600 hover:bg-slate-100;
+}
+.card {
+  @apply bg-white rounded-2xl border border-slate-200 shadow-sm p-5;
+}

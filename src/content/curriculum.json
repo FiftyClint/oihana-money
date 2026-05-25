@@ -1,0 +1,449 @@
+{
+  "tracks": [
+    { "id": "1", "name": "Foundations", "blurb": "What money is and how it grows." },
+    { "id": "2", "name": "Banks & Accounts", "blurb": "Where you keep money and why it matters." },
+    { "id": "3", "name": "Investing 101", "blurb": "Stocks, index funds, and how the market works." },
+    { "id": "4", "name": "Risk & Diversification", "blurb": "How not to blow up your portfolio. (Coming next.)" },
+    { "id": "5", "name": "Portfolio Building", "blurb": "Putting it all together. (Coming next.)" }
+  ],
+  "concepts": [
+    {
+      "id": "c-1-1",
+      "track_id": "1",
+      "audience_age_range": "17+",
+      "title": "What money is for",
+      "summary": "Money has four jobs: it's a way to trade, store value, measure prices, and pay debts.",
+      "why_it_matters": "Once you see money as a tool with specific jobs, you stop treating it like a scoreboard.",
+      "depends_on": [],
+      "application_id": "a-1-1"
+    },
+    {
+      "id": "c-1-2",
+      "track_id": "1",
+      "audience_age_range": "17+",
+      "title": "Income vs spending",
+      "summary": "Income is money in. Spending is money out. The gap between them is your only lever for everything else.",
+      "why_it_matters": "If income < spending, no investing strategy can save you. Every plan starts here.",
+      "depends_on": ["c-1-1"],
+      "application_id": "a-1-2"
+    },
+    {
+      "id": "c-1-3",
+      "track_id": "1",
+      "audience_age_range": "17+",
+      "title": "Saving vs spending tradeoff",
+      "summary": "Every dollar spent now is a dollar that can't grow. Every dollar saved buys future-you more freedom.",
+      "why_it_matters": "Saving isn't about deprivation. It's about deciding which future-you wins.",
+      "depends_on": ["c-1-2"]
+    },
+    {
+      "id": "c-1-4",
+      "track_id": "1",
+      "audience_age_range": "17+",
+      "title": "Simple interest",
+      "summary": "If you earn 5% on $100, you get $5 each year on the original $100. The base never changes.",
+      "why_it_matters": "Simple interest is what loans for cars and short-term savings often use. It's the boring cousin of compound interest.",
+      "depends_on": ["c-1-3"]
+    },
+    {
+      "id": "c-1-5",
+      "track_id": "1",
+      "audience_age_range": "17+",
+      "title": "Compound interest",
+      "summary": "Your earnings start earning their own earnings. Over decades, this curve goes vertical.",
+      "why_it_matters": "Compound interest is the single most important math in personal finance. Starting at 17 instead of 30 can mean millions of dollars by retirement.",
+      "depends_on": ["c-1-4"],
+      "application_id": "a-1-5"
+    },
+    {
+      "id": "c-2-1",
+      "track_id": "2",
+      "audience_age_range": "17+",
+      "title": "Checking vs savings",
+      "summary": "Checking is for spending — easy access, no interest. Savings is for storing — interest, harder to spend.",
+      "why_it_matters": "Friction matters. A checking-only setup makes saving harder than it needs to be.",
+      "depends_on": ["c-1-2"]
+    },
+    {
+      "id": "c-2-2",
+      "track_id": "2",
+      "audience_age_range": "17+",
+      "title": "What a bank actually does",
+      "summary": "A bank holds your deposits and lends them out at higher interest than they pay you. The difference is their profit.",
+      "why_it_matters": "Understanding this explains why high-yield savings accounts exist, why fees exist, and why your interest is low.",
+      "depends_on": ["c-2-1"]
+    },
+    {
+      "id": "c-2-3",
+      "track_id": "2",
+      "audience_age_range": "17+",
+      "title": "Fees and APY",
+      "summary": "APY is what you actually earn after compounding. Fees quietly subtract from your balance. Both matter more than the headline rate.",
+      "why_it_matters": "A 4.5% APY savings account beats a 5.0% account with a $10 monthly fee, every time.",
+      "depends_on": ["c-2-1"],
+      "application_id": "a-2-3"
+    },
+    {
+      "id": "c-2-4",
+      "track_id": "2",
+      "audience_age_range": "17+",
+      "title": "Emergency fund",
+      "summary": "Cash you don't touch unless something goes wrong. Aim for 3-6 months of essential spending.",
+      "why_it_matters": "Without one, the first bad surprise forces you to sell investments or take on debt at the worst possible time.",
+      "depends_on": ["c-1-3", "c-2-1"]
+    },
+    {
+      "id": "c-3-1",
+      "track_id": "3",
+      "audience_age_range": "17+",
+      "title": "What is a stock?",
+      "summary": "A stock is a tiny slice of ownership in a real company. If the company is worth more later, your slice is too.",
+      "why_it_matters": "Once you grasp ownership, you understand why the stock market isn't gambling — it's owning real businesses.",
+      "depends_on": ["c-1-5"]
+    },
+    {
+      "id": "c-3-2",
+      "track_id": "3",
+      "audience_age_range": "17+",
+      "title": "Brokerage account",
+      "summary": "A brokerage account holds investments instead of cash. You move money in from a bank, then buy stocks or funds with it.",
+      "why_it_matters": "You can't invest from a checking account. The brokerage is the door.",
+      "depends_on": ["c-2-1", "c-3-1"]
+    },
+    {
+      "id": "c-3-3",
+      "track_id": "3",
+      "audience_age_range": "17+",
+      "title": "Why the market tends to go up",
+      "summary": "Over long periods, the economy grows: more people, more output, more value. Stock prices reflect that growth. Short term it's noisy; long term it bends up.",
+      "why_it_matters": "This is why long-horizon investors are calm during crashes — they know the long arc.",
+      "depends_on": ["c-3-1"]
+    },
+    {
+      "id": "c-3-4",
+      "track_id": "3",
+      "audience_age_range": "17+",
+      "title": "Index funds",
+      "summary": "An index fund buys a tiny slice of every company in a list (like the S&P 500). One purchase = instant diversification.",
+      "why_it_matters": "Most professional stock-pickers fail to beat a simple S&P 500 index fund. So you usually shouldn't try either.",
+      "depends_on": ["c-3-1", "c-3-3"],
+      "application_id": "a-3-4"
+    },
+    {
+      "id": "c-3-5",
+      "track_id": "3",
+      "audience_age_range": "17+",
+      "title": "ETF vs mutual fund",
+      "summary": "Both bundle many investments. ETFs trade like stocks (any time, any amount). Mutual funds trade once a day at the closing price. ETFs usually have lower fees.",
+      "why_it_matters": "For most people, low-fee ETFs are simpler. Mutual funds are common in employer 401(k)s.",
+      "depends_on": ["c-3-4"]
+    }
+  ],
+  "cards": [
+    {
+      "id": "card-1-1-a",
+      "concept_id": "c-1-1",
+      "type": "multiple_choice",
+      "prompt": "Which of these is NOT one of money's four jobs?",
+      "choices": [
+        "A way to trade for things",
+        "A way to store value over time",
+        "A way to measure how successful you are",
+        "A way to settle debts"
+      ],
+      "correct_choice_index": 2,
+      "answer": "Money doesn't measure your success — only your purchasing power.",
+      "explanation": "Money is a tool: trade, store, measure prices, pay debts. People who treat it as a scoreboard make worse decisions with it."
+    },
+    {
+      "id": "card-1-1-b",
+      "concept_id": "c-1-1",
+      "type": "recall",
+      "prompt": "If you bury cash in a jar for 20 years, which 'job' of money does it fail at?",
+      "answer": "Storing value.",
+      "explanation": "Inflation slowly eats the purchasing power of cash. $100 in 2004 buys way less in 2024. Cash is a poor long-term store of value."
+    },
+    {
+      "id": "card-1-2-a",
+      "concept_id": "c-1-2",
+      "type": "recall",
+      "prompt": "What's the one number that determines whether every other money strategy can work for you?",
+      "answer": "The gap between income and spending.",
+      "explanation": "If you spend everything you earn, there's nothing to save or invest. Closing this gap is the foundation of every financial plan."
+    },
+    {
+      "id": "card-1-2-b",
+      "concept_id": "c-1-2",
+      "type": "multiple_choice",
+      "prompt": "You make $400/month babysitting and spend $420. What's your most important next move?",
+      "choices": [
+        "Open a brokerage account",
+        "Cut $20+/month from spending or earn $20+ more",
+        "Buy an index fund",
+        "Get a credit card to cover the gap"
+      ],
+      "correct_choice_index": 1,
+      "answer": "Close the gap first. Spend less or earn more.",
+      "explanation": "Until income > spending, investing or borrowing both make things worse. Step 1 is always the gap."
+    },
+    {
+      "id": "card-1-3-a",
+      "concept_id": "c-1-3",
+      "type": "explain",
+      "prompt": "In your own words: why is saving a dollar today usually worth more than spending it?",
+      "answer": "Because that dollar can grow. Spent, it's gone; saved and invested, it compounds into more dollars over time.",
+      "explanation": "Saving isn't deprivation — it's transferring purchasing power from present-you to future-you, with interest."
+    },
+    {
+      "id": "card-1-4-a",
+      "concept_id": "c-1-4",
+      "type": "recall",
+      "prompt": "You put $1,000 in an account that pays 5% simple interest. After 3 years, how much interest have you earned?",
+      "answer": "$150 (5% of $1,000 × 3 years).",
+      "explanation": "Simple interest = principal × rate × time. The original $1,000 never changes."
+    },
+    {
+      "id": "card-1-5-a",
+      "concept_id": "c-1-5",
+      "type": "multiple_choice",
+      "prompt": "$1,000 invested at 10% compound interest. About what does it grow to in 30 years?",
+      "choices": ["$4,000", "$10,000", "$17,000", "$50,000"],
+      "correct_choice_index": 2,
+      "answer": "About $17,000.",
+      "explanation": "At 10% compounded annually, money doubles roughly every 7 years (the Rule of 72). 30 years ≈ four doublings. $1,000 → $2,000 → $4,000 → $8,000 → $16,000."
+    },
+    {
+      "id": "card-1-5-b",
+      "concept_id": "c-1-5",
+      "type": "explain",
+      "prompt": "Why does starting to invest at 17 vs 30 matter so much, mathematically?",
+      "answer": "Compound interest needs time to snowball. The first 13 years aren't worth much, but they push the last 30 years way higher.",
+      "explanation": "Money doubles every ~7 years at 10%. Starting 13 years earlier means almost two extra doublings. That's often the difference between hundreds of thousands and millions."
+    },
+    {
+      "id": "card-1-5-c",
+      "concept_id": "c-1-5",
+      "type": "recall",
+      "prompt": "What's the Rule of 72?",
+      "answer": "Divide 72 by the interest rate to estimate how many years it takes money to double.",
+      "explanation": "Example: 72 / 9% = 8 years to double. It's a quick mental shortcut you can use for the rest of your life."
+    },
+    {
+      "id": "card-2-1-a",
+      "concept_id": "c-2-1",
+      "type": "multiple_choice",
+      "prompt": "You want a place to put money you saved for next summer that you won't touch. Which account?",
+      "choices": ["Checking", "Savings", "Cash under the mattress", "Brokerage"],
+      "correct_choice_index": 1,
+      "answer": "Savings.",
+      "explanation": "Savings adds friction (slower to spend) and pays interest. Checking is for money you spend frequently."
+    },
+    {
+      "id": "card-2-1-b",
+      "concept_id": "c-2-1",
+      "type": "recall",
+      "prompt": "Why does having a separate savings account help you save more?",
+      "answer": "Friction. It's slightly harder to spend, so you spend it less.",
+      "explanation": "Behavior beats willpower. The right setup makes the good choice the easy choice."
+    },
+    {
+      "id": "card-2-2-a",
+      "concept_id": "c-2-2",
+      "type": "explain",
+      "prompt": "In your own words: how does a bank make money?",
+      "answer": "It pays you a little interest on deposits, and charges others a lot more interest on loans. The gap is profit.",
+      "explanation": "This is why your savings account pays 0.5% while a mortgage costs 7%. The bank is in the middle, taking a cut."
+    },
+    {
+      "id": "card-2-3-a",
+      "concept_id": "c-2-3",
+      "type": "multiple_choice",
+      "prompt": "Account A: 5.0% APY, $10/month fee. Account B: 4.5% APY, no fee. You have $1,000 in there for a year. Which is better?",
+      "choices": ["A — higher rate wins", "B — no fee wins", "They're the same", "Need more info"],
+      "correct_choice_index": 1,
+      "answer": "B is better.",
+      "explanation": "A earns ~$50 but loses $120 in fees, netting -$70. B earns $45 and loses nothing, netting +$45. The fee dwarfs the rate difference."
+    },
+    {
+      "id": "card-2-4-a",
+      "concept_id": "c-2-4",
+      "type": "recall",
+      "prompt": "How big should an emergency fund usually be?",
+      "answer": "3-6 months of essential spending.",
+      "explanation": "Big enough to cover a job loss or unexpected expense without selling investments or taking on debt at the worst possible time."
+    },
+    {
+      "id": "card-3-1-a",
+      "concept_id": "c-3-1",
+      "type": "explain",
+      "prompt": "In your own words: what do you actually own when you 'own a share of Apple'?",
+      "answer": "A tiny fraction of the entire company — a slice of its buildings, products, profits, and future.",
+      "explanation": "Stocks aren't abstract tickets. They're literal ownership of a real business. That's why the market isn't gambling — it's owning."
+    },
+    {
+      "id": "card-3-1-b",
+      "concept_id": "c-3-1",
+      "type": "multiple_choice",
+      "prompt": "If a company you own stock in becomes more profitable and grows, what generally happens to your share's value?",
+      "choices": ["Stays the same", "Goes down", "Goes up", "Becomes worthless"],
+      "correct_choice_index": 2,
+      "answer": "Goes up.",
+      "explanation": "Share price reflects what investors think the company is worth. More profit and growth = higher value = your slice is worth more."
+    },
+    {
+      "id": "card-3-2-a",
+      "concept_id": "c-3-2",
+      "type": "recall",
+      "prompt": "Can you buy stocks directly from a checking account?",
+      "answer": "No — you need a brokerage account.",
+      "explanation": "Banks hold cash; brokerages hold investments. Most people open a brokerage with a bank-to-brokerage transfer, then buy stocks or funds inside the brokerage."
+    },
+    {
+      "id": "card-3-3-a",
+      "concept_id": "c-3-3",
+      "type": "explain",
+      "prompt": "Why has the stock market gone up over the long run, even though it crashes sometimes?",
+      "answer": "Because the economy grows over time: more people, more productivity, more profit. Stock prices follow that growth, just bumpily.",
+      "explanation": "Year to year, prices are noisy. Decade to decade, the trend is up because real businesses keep getting more valuable."
+    },
+    {
+      "id": "card-3-3-b",
+      "concept_id": "c-3-3",
+      "type": "multiple_choice",
+      "prompt": "The market just dropped 30%. You have a 40-year time horizon. Best move?",
+      "choices": [
+        "Sell everything to avoid further losses",
+        "Keep investing on schedule",
+        "Wait for it to recover, then invest",
+        "Move it all to cash"
+      ],
+      "correct_choice_index": 1,
+      "answer": "Keep investing on schedule.",
+      "explanation": "Over 40 years, every past crash has recovered and gone much higher. Selling locks in the loss. Buying during the dip means you get the same shares for cheaper."
+    },
+    {
+      "id": "card-3-4-a",
+      "concept_id": "c-3-4",
+      "type": "recall",
+      "prompt": "What does an S&P 500 index fund actually own?",
+      "answer": "A tiny piece of every one of the 500 largest US companies.",
+      "explanation": "One purchase = instant diversification across 500 businesses. You're not betting on one winner — you own the whole league."
+    },
+    {
+      "id": "card-3-4-b",
+      "concept_id": "c-3-4",
+      "type": "explain",
+      "prompt": "Why do index funds usually beat professional stock-pickers over the long run?",
+      "answer": "Because picking winners is hard, and even good pickers charge fees that eat into returns. Index funds don't try to pick — they just own everything cheaply.",
+      "explanation": "Over 15 years, ~90% of active mutual funds underperform a simple S&P 500 index. The fees matter more than the picks."
+    },
+    {
+      "id": "card-3-4-c",
+      "concept_id": "c-3-4",
+      "type": "multiple_choice",
+      "prompt": "Which is usually the best first investment for a teen with a long time horizon?",
+      "choices": [
+        "A trendy individual stock",
+        "A low-cost S&P 500 index fund",
+        "Crypto",
+        "A high-interest savings account"
+      ],
+      "correct_choice_index": 1,
+      "answer": "A low-cost S&P 500 index fund.",
+      "explanation": "Long time horizon + low fees + broad diversification = compounding does the work. Trendy stocks and crypto are bets, not investments."
+    },
+    {
+      "id": "card-3-5-a",
+      "concept_id": "c-3-5",
+      "type": "multiple_choice",
+      "prompt": "Main practical difference between an ETF and a mutual fund?",
+      "choices": [
+        "ETFs are riskier",
+        "ETFs trade any time of day like a stock; mutual funds settle once a day",
+        "Mutual funds are always better",
+        "There is no difference"
+      ],
+      "correct_choice_index": 1,
+      "answer": "ETFs trade intraday; mutual funds settle at end of day.",
+      "explanation": "ETFs usually also have lower fees. For most beginners, a low-fee broad ETF is the simplest place to start."
+    }
+  ],
+  "applications": [
+    {
+      "id": "a-1-1",
+      "concept_ids": ["c-1-1"],
+      "type": "decision",
+      "title": "The Jar Test",
+      "intro": "You bury $500 in cash in your backyard. 20 years later, you dig it up. Roughly how much can you buy with it?",
+      "payload": {
+        "choices": [
+          { "label": "About the same as today", "outcome": "wrong", "feedback": "Inflation has averaged ~3%/yr. Over 20 years, $500 buys roughly $275 worth of today's stuff. Cash loses purchasing power slowly but steadily." },
+          { "label": "About half as much", "outcome": "correct", "feedback": "Correct. Cash is a poor long-term store of value. Money saved in a low-yield account barely keeps up; money invested can stay ahead." },
+          { "label": "About twice as much", "outcome": "wrong", "feedback": "Cash doesn't grow. Investments grow. Money in a jar just sits there while prices around it climb." }
+        ]
+      }
+    },
+    {
+      "id": "a-1-2",
+      "concept_ids": ["c-1-2"],
+      "type": "decision",
+      "title": "Build a Monthly Budget",
+      "intro": "Income: $400/month (babysitting + tutoring). Pick the spending plan that leaves room to save.",
+      "payload": {
+        "choices": [
+          { "label": "Food out $120, clothes $100, fun $180 — total $400", "outcome": "wrong", "feedback": "Spends every dollar. No room to save = no investing later. The plan that wins is the one that leaves a gap." },
+          { "label": "Food out $100, clothes $80, fun $120, save $100", "outcome": "correct", "feedback": "Nice. $100/mo saved at 8% returns ≈ $48,000 by age 47. The 25% savings rate is the magic." },
+          { "label": "Food out $60, clothes $40, fun $60, save $240", "outcome": "ok", "feedback": "Aggressive — saves 60%. Mathematically great, but if you can't sustain it, you'll quit. A boring sustainable plan beats a heroic short-lived one." }
+        ]
+      }
+    },
+    {
+      "id": "a-1-5",
+      "concept_ids": ["c-1-5"],
+      "type": "calculator",
+      "title": "Time Travel Calculator",
+      "intro": "Move the sliders. See how starting age, monthly amount, and rate change the outcome.",
+      "payload": {
+        "defaults": { "monthly_amount": 100, "start_age": 17, "end_age": 65, "annual_rate": 0.08 },
+        "min_monthly": 10,
+        "max_monthly": 500
+      }
+    },
+    {
+      "id": "a-2-3",
+      "concept_ids": ["c-2-3"],
+      "type": "decision",
+      "title": "Pick the Better Account",
+      "intro": "You have $2,000 you want to keep in savings for a year. Which account do you pick?",
+      "payload": {
+        "choices": [
+          { "label": "Bank A — 5.2% APY, $12/month fee", "outcome": "wrong", "feedback": "Earns ~$104, loses $144 in fees. Net: -$40. The fee killed it." },
+          { "label": "Bank B — 4.8% APY, no fees", "outcome": "correct", "feedback": "Earns ~$96, loses nothing. Net: +$96. Fees almost always beat rate differences this small." },
+          { "label": "Bank C — 6.0% APY, $25/month fee, $500 minimum balance", "outcome": "wrong", "feedback": "Earns ~$120, loses $300 in fees. Net: -$180. The headline rate is bait." }
+        ]
+      }
+    },
+    {
+      "id": "a-3-4",
+      "concept_ids": ["c-3-4", "c-3-3", "c-1-5"],
+      "type": "portfolio",
+      "title": "30-Year Portfolio Replay",
+      "intro": "You're investing $1,000. Pick an allocation. We'll replay 30 years of real US market returns (1995-2024). See what happens.",
+      "payload": {
+        "initial_amount": 1000,
+        "monthly_contribution": 50,
+        "years": 30,
+        "instruments": [
+          { "key": "stocks", "label": "Stocks (S&P 500)", "color": "#0f172a" },
+          { "key": "bonds", "label": "Bonds (10y Treasuries)", "color": "#64748b" },
+          { "key": "cash", "label": "Cash (savings)", "color": "#cbd5e1" }
+        ],
+        "annual_returns": {
+          "stocks": [0.376, 0.230, 0.334, 0.286, 0.210, -0.091, -0.119, -0.221, 0.287, 0.108, 0.049, 0.158, 0.055, -0.370, 0.265, 0.151, 0.021, 0.160, 0.323, 0.137, 0.014, 0.120, 0.218, -0.044, 0.314, 0.184, 0.288, -0.181, 0.262, 0.250],
+          "bonds": [0.184, 0.013, 0.118, 0.082, -0.008, 0.166, 0.058, 0.149, 0.038, 0.045, 0.029, 0.020, 0.099, 0.201, -0.111, 0.084, 0.169, 0.041, -0.091, 0.105, 0.012, 0.005, 0.024, 0.005, 0.090, 0.110, -0.045, -0.165, 0.040, 0.012],
+          "cash": [0.054, 0.052, 0.053, 0.049, 0.047, 0.058, 0.038, 0.017, 0.011, 0.013, 0.030, 0.048, 0.046, 0.020, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.003, 0.010, 0.020, 0.022, 0.005, 0.001, 0.025, 0.050, 0.045]
+        }
+      }
+    }
+  ]
+}
