@@ -3,8 +3,9 @@
     { "id": "1", "name": "Foundations", "blurb": "What money is and how it grows." },
     { "id": "2", "name": "Banks & Accounts", "blurb": "Where you keep money and why it matters." },
     { "id": "3", "name": "Investing 101", "blurb": "Stocks, index funds, and how the market works." },
-    { "id": "4", "name": "Risk & Diversification", "blurb": "How not to blow up your portfolio. (Coming next.)" },
-    { "id": "5", "name": "Portfolio Building", "blurb": "Putting it all together. (Coming next.)" }
+    { "id": "4", "name": "Risk & Diversification", "blurb": "How not to blow up your portfolio." },
+    { "id": "5", "name": "Portfolio Building", "blurb": "Putting it all together: allocation, DCA, rebalancing, Roth IRA." },
+    { "id": "6", "name": "Behavioral Pitfalls", "blurb": "The mental traps that cost most investors money." }
   ],
   "concepts": [
     {
@@ -137,6 +138,118 @@
       "summary": "Both bundle many investments. ETFs trade like stocks (any time, any amount). Mutual funds trade once a day at the closing price. ETFs usually have lower fees.",
       "why_it_matters": "For most people, low-fee ETFs are simpler. Mutual funds are common in employer 401(k)s.",
       "depends_on": ["c-3-4"]
+    },
+    {
+      "id": "c-4-1",
+      "track_id": "4",
+      "audience_age_range": "17+",
+      "title": "Risk vs return",
+      "summary": "Higher expected return comes with bigger short-term swings. Cash is steady but barely grows. Stocks grow a lot but bounce around. That's the deal.",
+      "why_it_matters": "Every investment choice is a tradeoff between sleeping at night and growing over time. Knowing your spot on that line is where every plan starts.",
+      "depends_on": ["c-3-3"]
+    },
+    {
+      "id": "c-4-2",
+      "track_id": "4",
+      "audience_age_range": "17+",
+      "title": "Diversification",
+      "summary": "Owning many different investments means no single bad one ruins you. Index funds give instant diversification across hundreds of companies.",
+      "why_it_matters": "Concentrated bets win huge or lose huge. Diversification trades the chance of getting rich quickly for the near-certainty of doing fine.",
+      "depends_on": ["c-3-4", "c-4-1"],
+      "application_id": "a-4-2"
+    },
+    {
+      "id": "c-4-3",
+      "track_id": "4",
+      "audience_age_range": "17+",
+      "title": "Time horizon",
+      "summary": "Money you need next year shouldn't be in stocks. Money you won't touch for 30 years probably should be. The horizon dictates the risk.",
+      "why_it_matters": "Most financial mistakes come from mismatching horizon and account: stocks for next year's down payment, or cash for a 40-year retirement.",
+      "depends_on": ["c-1-5", "c-4-1"]
+    },
+    {
+      "id": "c-4-4",
+      "track_id": "4",
+      "audience_age_range": "17+",
+      "title": "Volatility isn't loss",
+      "summary": "A 30% drop is only a real loss if you sell. If you hold, you still own the same shares — and history says they recover and exceed prior highs.",
+      "why_it_matters": "Most amateur investors lose money not from bad picks, but from panic-selling at the bottom. Internalizing this one idea changes outcomes by hundreds of thousands over a lifetime.",
+      "depends_on": ["c-3-3", "c-4-1"],
+      "application_id": "a-4-4"
+    },
+    {
+      "id": "c-5-1",
+      "track_id": "5",
+      "audience_age_range": "17+",
+      "title": "Asset allocation",
+      "summary": "How much you put in stocks vs bonds vs cash. A common starting heuristic for long horizons: (110 minus your age)% in stocks.",
+      "why_it_matters": "Allocation is the single biggest driver of your long-term returns — more than picking the perfect stock or the perfect entry point.",
+      "depends_on": ["c-4-1", "c-4-3"]
+    },
+    {
+      "id": "c-5-2",
+      "track_id": "5",
+      "audience_age_range": "17+",
+      "title": "Dollar-cost averaging",
+      "summary": "Investing a fixed amount on a fixed schedule — say, $100 every month — instead of trying to time the market. Smooths out the bumpy ride.",
+      "why_it_matters": "Nobody reliably times the market. DCA removes the temptation and protects you from the worst-timing-ever mistake.",
+      "depends_on": ["c-3-4", "c-4-4"],
+      "application_id": "a-5-2"
+    },
+    {
+      "id": "c-5-3",
+      "track_id": "5",
+      "audience_age_range": "17+",
+      "title": "Rebalancing",
+      "summary": "Over time stocks grow faster than bonds, so the mix drifts. Once a year, sell a little of what grew and buy more of what didn't. Gets you back to your target.",
+      "why_it_matters": "Forces you to sell high and buy low — automatically, without predicting anything.",
+      "depends_on": ["c-5-1"]
+    },
+    {
+      "id": "c-5-4",
+      "track_id": "5",
+      "audience_age_range": "17+",
+      "title": "Roth IRA",
+      "summary": "A retirement account where you pay tax on the money going in, but all the growth and withdrawals after age 59½ are tax-free. With earned income, even a teen can open one.",
+      "why_it_matters": "A Roth IRA opened at 17 with $2,000/year for 8 years, never touched again, grows to about $420,000 by age 65. The math is absurd because of compound + tax-free + time.",
+      "depends_on": ["c-3-2", "c-5-1"],
+      "application_id": "a-5-4"
+    },
+    {
+      "id": "c-6-1",
+      "track_id": "6",
+      "audience_age_range": "17+",
+      "title": "FOMO — fear of missing out",
+      "summary": "When something has just shot up, the urge to buy in is strongest — and that's usually the worst time. You're paying peak prices.",
+      "why_it_matters": "Every bubble in history (crypto 2021, dot-com 1999, tulips 1637) had ordinary people piling in after the smart money had already cashed out.",
+      "depends_on": ["c-3-3"]
+    },
+    {
+      "id": "c-6-2",
+      "track_id": "6",
+      "audience_age_range": "17+",
+      "title": "Panic selling",
+      "summary": "When the market drops, your gut screams 'sell before it gets worse.' But selling locks in the loss and means you miss the recovery.",
+      "why_it_matters": "Missing just the 10 best days in the market over a 20-year period roughly cuts your returns in half. Most of those best days happen right after the worst ones.",
+      "depends_on": ["c-4-4"]
+    },
+    {
+      "id": "c-6-3",
+      "track_id": "6",
+      "audience_age_range": "17+",
+      "title": "Recency bias",
+      "summary": "Your brain assumes the recent past predicts the future. If stocks went up for 10 years, it feels like they'll keep going up forever. They won't.",
+      "why_it_matters": "This is how people overinvest in whatever just won and underinvest in what's about to. Long-horizon investors ignore the last 10 years.",
+      "depends_on": ["c-3-3"]
+    },
+    {
+      "id": "c-6-4",
+      "track_id": "6",
+      "audience_age_range": "17+",
+      "title": "Loss aversion",
+      "summary": "Losing $100 feels about twice as bad as gaining $100 feels good. Your brain is biased toward avoiding losses — even when that bias leads to the worse decision.",
+      "why_it_matters": "Loss aversion is why people sell their winners (lock in gains) and keep their losers (don't admit the loss). The math says to do the opposite.",
+      "depends_on": ["c-4-1"]
     }
   ],
   "cards": [
@@ -366,6 +479,344 @@
       "correct_choice_index": 1,
       "answer": "ETFs trade intraday; mutual funds settle at end of day.",
       "explanation": "ETFs usually also have lower fees. For most beginners, a low-fee broad ETF is the simplest place to start."
+    },
+
+    {
+      "id": "card-4-1-a",
+      "concept_id": "c-4-1",
+      "type": "multiple_choice",
+      "prompt": "Which has the highest expected return over 30 years?",
+      "choices": [
+        "High-yield savings account (~4% APY)",
+        "S&P 500 index fund",
+        "Cash under the mattress",
+        "All three are about the same"
+      ],
+      "correct_choice_index": 1,
+      "answer": "S&P 500 index fund.",
+      "explanation": "Historically ~10%/yr long-term, vs ~4% savings, vs cash that loses to inflation. Higher return comes with bigger short-term swings — that's the price of admission."
+    },
+    {
+      "id": "card-4-1-b",
+      "concept_id": "c-4-1",
+      "type": "explain",
+      "prompt": "Why is a savings account 'safer' than stocks if both can lose value to inflation?",
+      "answer": "Savings doesn't drop visibly day to day; you keep your nominal dollars. Stocks can drop 30% in a year. But over decades, savings barely beats inflation — that's a slow-motion loss. Stocks grow.",
+      "explanation": "Two kinds of risk: short-term volatility (stocks bounce) vs long-term erosion (cash loses purchasing power). Different horizons need different definitions of safe."
+    },
+    {
+      "id": "card-4-1-c",
+      "concept_id": "c-4-1",
+      "type": "recall",
+      "prompt": "What's the price you pay for higher expected returns?",
+      "answer": "Bigger short-term ups and downs, and a real chance of losing money if forced to sell at a bad time.",
+      "explanation": "No investment offers high return without higher volatility or higher risk of loss. Anything that promises both is a scam."
+    },
+    {
+      "id": "card-4-2-a",
+      "concept_id": "c-4-2",
+      "type": "multiple_choice",
+      "prompt": "You put 100% of your savings into one company's stock. The CEO is arrested for fraud the next year. Your portfolio probably:",
+      "choices": ["Drops 5%", "Drops 50%+", "Is unaffected", "Goes up"],
+      "correct_choice_index": 1,
+      "answer": "Drops 50%+.",
+      "explanation": "Concentrated bets carry concentrated risk. Even great companies (Enron, Lehman, Theranos) can crater on news you couldn't have predicted."
+    },
+    {
+      "id": "card-4-2-b",
+      "concept_id": "c-4-2",
+      "type": "explain",
+      "prompt": "Why does owning 500 companies through an index fund reduce risk much more than owning 5 carefully picked ones?",
+      "answer": "Because if any single company collapses, it's a tiny part of your portfolio, not half of it. And 500 spans many industries, so one bad sector doesn't sink everything.",
+      "explanation": "Mathematically: 5 stocks have ~25% of the diversification benefit of 30 stocks. 500 stocks have ~95%. The first 20 picks do most of the work."
+    },
+    {
+      "id": "card-4-2-c",
+      "concept_id": "c-4-2",
+      "type": "recall",
+      "prompt": "What's the simplest way to be diversified across 500 US companies in one purchase?",
+      "answer": "Buy a low-cost S&P 500 index fund (or ETF).",
+      "explanation": "One ticker (e.g., VOO, IVV, SPY) = ownership of all 500. The simplest investing decision available to a human."
+    },
+    {
+      "id": "card-4-3-a",
+      "concept_id": "c-4-3",
+      "type": "multiple_choice",
+      "prompt": "You're saving for a house down payment in 18 months. Where should that money go?",
+      "choices": [
+        "S&P 500 index fund",
+        "High-yield savings or short-term Treasury bonds",
+        "Crypto",
+        "A trendy growth stock"
+      ],
+      "correct_choice_index": 1,
+      "answer": "High-yield savings or short-term Treasury bonds.",
+      "explanation": "Short horizon = no time to recover from a 30% drop. Stocks are wrong for any money you actually need within ~3 years."
+    },
+    {
+      "id": "card-4-3-b",
+      "concept_id": "c-4-3",
+      "type": "recall",
+      "prompt": "The longer your time horizon, the more you can put in...",
+      "answer": "Stocks. Because short-term dips have decades to recover.",
+      "explanation": "A 30% drop in year 3 of a 40-year plan is invisible by year 40. A 30% drop in year 1 of a 2-year plan ruins it."
+    },
+    {
+      "id": "card-4-4-a",
+      "concept_id": "c-4-4",
+      "type": "multiple_choice",
+      "prompt": "Your $1,000 investment drops to $700 (down 30%). You haven't sold. How much did you LOSE?",
+      "choices": [
+        "$300",
+        "Nothing — yet",
+        "30% of your portfolio",
+        "All of it"
+      ],
+      "correct_choice_index": 1,
+      "answer": "Nothing — yet.",
+      "explanation": "Paper losses become real losses only when you sell. If you hold, you still own the same shares. The market just temporarily disagrees with you about what they're worth."
+    },
+    {
+      "id": "card-4-4-b",
+      "concept_id": "c-4-4",
+      "type": "multiple_choice",
+      "prompt": "Same scenario: drop to $700, recovers to $1,100 over 3 years. How much would you have lost if you'd sold at $700 and stayed in cash?",
+      "choices": [
+        "$0 — you broke even",
+        "$400 (the recovery you missed)",
+        "$300",
+        "Nothing — cash is safe"
+      ],
+      "correct_choice_index": 1,
+      "answer": "$400 — the recovery you missed.",
+      "explanation": "Selling locked in the $300 paper loss AND prevented the $400 recovery. Total opportunity cost: $400 vs holding. This is how panic-selling destroys long-term returns."
+    },
+    {
+      "id": "card-4-4-c",
+      "concept_id": "c-4-4",
+      "type": "explain",
+      "prompt": "Why is 'missing the 10 best days in the market' such a big deal?",
+      "answer": "Because those days are concentrated near the worst days. If you panic-sell after a crash, you almost always miss the rebound days too. Missing just 10 days out of 20 years cuts returns roughly in half.",
+      "explanation": "Markets don't recover linearly — they often surge in single days right after the worst drops. Being out of the market for any reason during those days is catastrophically costly."
+    },
+
+    {
+      "id": "card-5-1-a",
+      "concept_id": "c-5-1",
+      "type": "multiple_choice",
+      "prompt": "The single biggest predictor of your long-term portfolio returns is:",
+      "choices": [
+        "Which specific stocks you pick",
+        "When you buy and sell",
+        "Your overall allocation (% in stocks vs bonds vs cash)",
+        "Whether you got lucky"
+      ],
+      "correct_choice_index": 2,
+      "answer": "Your overall allocation.",
+      "explanation": "Studies show allocation drives ~90% of long-term return variance. Stock-picking and timing drive single digits. Get the mix right; the rest matters far less than the news suggests."
+    },
+    {
+      "id": "card-5-1-b",
+      "concept_id": "c-5-1",
+      "type": "recall",
+      "prompt": "A common starting heuristic for stock allocation by age (US, long horizon):",
+      "answer": "(110 minus your age)% in stocks, rest in bonds/cash. At 17, that's 93% stocks. At 65, 45%.",
+      "explanation": "Not a rule — a starting point. Younger investors can tolerate more volatility because they have more decades to recover."
+    },
+    {
+      "id": "card-5-1-c",
+      "concept_id": "c-5-1",
+      "type": "explain",
+      "prompt": "Why does the 'right' allocation change as you get older?",
+      "answer": "Because your time horizon shrinks. At 25, a 40% drop has decades to recover. At 65, you may need to withdraw soon, so you can't afford to wait it out.",
+      "explanation": "Allocation should mirror when you actually need the money. Higher stock % when far away from needing it; more bonds/cash as you approach needing it."
+    },
+    {
+      "id": "card-5-2-a",
+      "concept_id": "c-5-2",
+      "type": "multiple_choice",
+      "prompt": "Dollar-cost averaging means:",
+      "choices": [
+        "Buying stocks only when the dollar is strong",
+        "Investing a fixed amount on a fixed schedule, regardless of price",
+        "Buying only the cheapest stocks",
+        "Selling once you hit a profit target"
+      ],
+      "correct_choice_index": 1,
+      "answer": "Investing a fixed amount on a fixed schedule.",
+      "explanation": "E.g., $100 every month into an index fund. When prices are high, $100 buys fewer shares; when low, more shares. Averages out your cost over time."
+    },
+    {
+      "id": "card-5-2-b",
+      "concept_id": "c-5-2",
+      "type": "recall",
+      "prompt": "Why does DCA protect you from worst-timing-ever mistakes?",
+      "answer": "Because you never put all your money in at one moment. If that one moment turned out to be the peak before a crash, you'd be devastated. Spreading entries means some buys happen during dips.",
+      "explanation": "DCA isn't statistically optimal (lump sum wins about 2/3 of the time), but it's emotionally optimal — you can't second-guess what you didn't try to time."
+    },
+    {
+      "id": "card-5-2-c",
+      "concept_id": "c-5-2",
+      "type": "explain",
+      "prompt": "Why is 'I'll invest when I have a feeling the market is low' usually a bad strategy?",
+      "answer": "Because feelings are wrong. The market often goes UP while you wait, and you end up chasing it. Or you wait so long that you never invest at all.",
+      "explanation": "'Time in the market beats timing the market' is a cliché because it's mathematically true for almost every investor."
+    },
+    {
+      "id": "card-5-3-a",
+      "concept_id": "c-5-3",
+      "type": "multiple_choice",
+      "prompt": "You started 70% stocks / 30% bonds. After 2 years of strong stock returns, you're at 82% stocks / 18% bonds. What should you do?",
+      "choices": [
+        "Nothing — winners keep winning",
+        "Sell some stocks, buy bonds to get back to 70/30",
+        "Put new money only into stocks",
+        "Sell all bonds, go 100% stocks"
+      ],
+      "correct_choice_index": 1,
+      "answer": "Rebalance to 70/30.",
+      "explanation": "Rebalancing forces you to sell high (the stocks that grew) and buy low (the bonds that lagged) — automatically, without predicting anything. It also keeps your risk in line with your plan."
+    },
+    {
+      "id": "card-5-3-b",
+      "concept_id": "c-5-3",
+      "type": "recall",
+      "prompt": "How often do most people rebalance?",
+      "answer": "Once a year, or when allocation drifts more than ~5% from target.",
+      "explanation": "More often = more transaction costs and tax events, usually for no benefit. Annual is the sweet spot for most people."
+    },
+    {
+      "id": "card-5-4-a",
+      "concept_id": "c-5-4",
+      "type": "multiple_choice",
+      "prompt": "The big advantage of a Roth IRA is:",
+      "choices": [
+        "No taxes ever on growth or qualified withdrawals after age 59½",
+        "You can withdraw any time penalty-free",
+        "The government matches your contributions",
+        "Higher guaranteed returns than other accounts"
+      ],
+      "correct_choice_index": 0,
+      "answer": "Tax-free growth and withdrawals after 59½.",
+      "explanation": "You pay tax on the money going in (no deduction up front), but everything that money grows into is yours to keep. Decades of compound growth → zero tax. Massive over a lifetime."
+    },
+    {
+      "id": "card-5-4-b",
+      "concept_id": "c-5-4",
+      "type": "multiple_choice",
+      "prompt": "A 17-year-old contributes $2,000/year for 8 years, then stops contributing but lets it sit invested until 65. At 8% growth, roughly what does it grow to?",
+      "choices": [
+        "About $50,000",
+        "About $150,000",
+        "About $250,000",
+        "About $400,000+"
+      ],
+      "correct_choice_index": 3,
+      "answer": "About $420,000.",
+      "explanation": "Total contributions: $16,000. Final value: ~$420,000. The difference ($404,000) is pure compound growth — tax-free in a Roth IRA. The math is absurd because of time + compound + tax-free."
+    },
+    {
+      "id": "card-5-4-c",
+      "concept_id": "c-5-4",
+      "type": "recall",
+      "prompt": "What's the requirement for a teen to open a Roth IRA?",
+      "answer": "Earned income — money from a job, babysitting, tutoring, freelance work. Allowance and gifts don't count.",
+      "explanation": "You can contribute up to what you earned that year (or the annual IRS limit, whichever is lower). A parent can open a 'custodial Roth IRA' for a minor; it transfers to the child at 18 or 21 depending on state."
+    },
+
+    {
+      "id": "card-6-1-a",
+      "concept_id": "c-6-1",
+      "type": "scenario",
+      "prompt": "Your friend tells you a stock has gone up 400% this year. You feel the urge to buy in. Best move?",
+      "type_override_for_mc": true,
+      "choices": [
+        "Buy now before it goes even higher",
+        "Pause. What made it go up 400%? Is the company fundamentally worth that much more? Usually no.",
+        "Buy a small amount, sell when it doubles",
+        "Borrow money to buy more"
+      ],
+      "correct_choice_index": 1,
+      "answer": "Pause and ask why.",
+      "explanation": "By the time you've heard about it, it's almost certainly already overpriced. The smart money got in cheap; ordinary buyers pile in at the peak. The pattern repeats every cycle.",
+      "_meta_note": "type=scenario means the UI treats it like recall — but having choices makes it MC. The CardView component handles this by checking for choices array."
+    },
+    {
+      "id": "card-6-1-b",
+      "concept_id": "c-6-1",
+      "type": "explain",
+      "prompt": "Why does buying right after a huge run-up usually end badly?",
+      "answer": "Because the run-up has already happened. You're paying peak prices for whatever made it run, with no remaining upside priced in. When sentiment shifts, you're holding the bag.",
+      "explanation": "FOMO investing systematically buys high and (often) sells low. The opposite of what makes money."
+    },
+    {
+      "id": "card-6-2-a",
+      "concept_id": "c-6-2",
+      "type": "multiple_choice",
+      "prompt": "The market drops 35% in 2 months. Headlines scream 'worst recession in decades.' Your portfolio is down $5,000. You have a 40-year horizon. Best move?",
+      "choices": [
+        "Sell everything to stop the bleeding",
+        "Hold. Keep contributing on schedule.",
+        "Pull half to cash, hold half",
+        "Move it all to crypto"
+      ],
+      "correct_choice_index": 1,
+      "answer": "Hold and keep contributing.",
+      "explanation": "Every past crash recovered to new highs. Selling locks in the loss and means you miss the rebound. Buying during the crash gets you the same shares at fire-sale prices. With 40 years ahead, this is the easiest decision."
+    },
+    {
+      "id": "card-6-2-b",
+      "concept_id": "c-6-2",
+      "type": "recall",
+      "prompt": "What's the cost of missing just the 10 best days in the stock market over a 20-year period?",
+      "answer": "Roughly cuts your total returns in half.",
+      "explanation": "And those best days often happen right after the worst ones — exactly when panic-sellers are sitting in cash. Time out of the market is brutally expensive."
+    },
+    {
+      "id": "card-6-3-a",
+      "concept_id": "c-6-3",
+      "type": "multiple_choice",
+      "prompt": "The S&P 500 returned 14%/year over the last 10 years. The honest expectation for the NEXT 10 years is:",
+      "choices": [
+        "About 14% — the trend continues",
+        "Higher — momentum is real",
+        "Long-term historical average is ~10%; recent strong decades are often followed by weaker ones",
+        "Definitely negative — bear market ahead"
+      ],
+      "correct_choice_index": 2,
+      "answer": "About the long-term average (~10%), often less after a strong decade.",
+      "explanation": "Returns mean-revert. Above-average decades usually borrow from the future. Honest expectations beat optimistic ones for planning."
+    },
+    {
+      "id": "card-6-3-b",
+      "concept_id": "c-6-3",
+      "type": "explain",
+      "prompt": "Why does 'the last 10 years were great, so the next 10 will be too' fail mathematically?",
+      "answer": "Because asset returns mean-revert over long periods. A decade of unusually high returns tends to pull future returns lower as valuations normalize. The market doesn't owe anyone a continuation of recent trends.",
+      "explanation": "This is why old-school investors are skeptical when everyone's optimistic — and brave when everyone's terrified. Recency bias is the everyone-else side of the trade."
+    },
+    {
+      "id": "card-6-4-a",
+      "concept_id": "c-6-4",
+      "type": "multiple_choice",
+      "prompt": "You have a winning stock (up 50%) and a losing stock (down 50%). You need to sell one. The losing stock's company has weakening fundamentals. Which should you usually sell?",
+      "choices": [
+        "The winner — lock in the gain while you can",
+        "The loser — admit it isn't recovering; put the money where it can grow",
+        "Whichever has been more volatile",
+        "Always the older purchase"
+      ],
+      "correct_choice_index": 1,
+      "answer": "Sell the loser (when fundamentals support that choice).",
+      "explanation": "Loss aversion makes people sell winners and keep losers ('it'll come back'). When the loser's underlying business is genuinely weakening, holding it for emotional reasons just digs the hole. Decisions should follow the company, not your purchase price."
+    },
+    {
+      "id": "card-6-4-b",
+      "concept_id": "c-6-4",
+      "type": "recall",
+      "prompt": "Roughly how much more does losing $100 feel, compared to gaining $100?",
+      "answer": "About twice as bad.",
+      "explanation": "This 2:1 asymmetry (Kahneman & Tversky's prospect theory) is why investors are systematically biased toward avoiding losses — leading to bad decisions like panic-selling at the bottom and refusing to admit losing bets."
     }
   ],
   "applications": [
@@ -443,6 +894,62 @@
           "bonds": [0.184, 0.013, 0.118, 0.082, -0.008, 0.166, 0.058, 0.149, 0.038, 0.045, 0.029, 0.020, 0.099, 0.201, -0.111, 0.084, 0.169, 0.041, -0.091, 0.105, 0.012, 0.005, 0.024, 0.005, 0.090, 0.110, -0.045, -0.165, 0.040, 0.012],
           "cash": [0.054, 0.052, 0.053, 0.049, 0.047, 0.058, 0.038, 0.017, 0.011, 0.013, 0.030, 0.048, 0.046, 0.020, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.003, 0.010, 0.020, 0.022, 0.005, 0.001, 0.025, 0.050, 0.045]
         }
+      }
+    },
+    {
+      "id": "a-4-2",
+      "concept_ids": ["c-4-2"],
+      "type": "decision",
+      "title": "Concentrated vs Diversified",
+      "intro": "You're investing $10,000. Same total amount, three strategies. Pick one.",
+      "payload": {
+        "choices": [
+          { "label": "Bet it all on one promising stock you've researched carefully", "outcome": "wrong", "feedback": "Possible outcomes range from 'tripled' to 'down 90%.' Even a great company can collapse from one scandal, lawsuit, or product failure. Concentrated bets carry concentrated risk you don't have to take." },
+          { "label": "Split across 5 carefully picked stocks", "outcome": "ok", "feedback": "Better than one, but still concentrated. Five stocks can all crater in the same sector downturn. Real diversification means owning the whole market, not picking 5 winners." },
+          { "label": "Buy a low-cost S&P 500 index fund (owns ~500 companies)", "outcome": "correct", "feedback": "Right answer. One purchase, instant diversification across 500 large US companies. Any single one going to zero is barely a blip. Your outcome follows the whole US economy, not one company's drama." }
+        ]
+      }
+    },
+    {
+      "id": "a-4-4",
+      "concept_ids": ["c-4-4", "c-6-2"],
+      "type": "decision",
+      "title": "Crash Survival — Real 2008 Data",
+      "intro": "October 2008. The S&P 500 has dropped 38% in 12 months. Your $10,000 portfolio is now worth $6,200. Headlines say 'worst since the Great Depression.' What do you do? (We'll show what each choice actually returned by 2018.)",
+      "payload": {
+        "choices": [
+          { "label": "Sell everything. Move to cash. Wait it out.", "outcome": "wrong", "feedback": "By 2018, your $6,200 in cash would be worth ~$6,500. Meanwhile the S&P 500 went from 850 to 2,750 — a 3.2x return. You locked in the loss AND missed the recovery. Final: ~$6,500 vs ~$20,000 if you'd held. Cost of panic: about $13,500." },
+          { "label": "Hold what you have. Don't add or sell.", "outcome": "ok", "feedback": "By 2018, your $6,200 grew to about $20,000. You recovered fully and made significant gains just by NOT panic-selling. The right call by miles. Patience did the work." },
+          { "label": "Hold AND keep adding new money on schedule.", "outcome": "correct", "feedback": "Best answer. By 2018, your original $6,200 grew to ~$20,000, and money you added DURING the crash (at fire-sale prices) often grew 4-5x. Crashes are when long-horizon investors get the best deals. Buying scared money is how fortunes are built." }
+        ]
+      }
+    },
+    {
+      "id": "a-5-2",
+      "concept_ids": ["c-5-2"],
+      "type": "decision",
+      "title": "Lump Sum vs Dollar-Cost Averaging",
+      "intro": "You inherited $12,000. You want to invest it in an S&P 500 index fund. Three approaches:",
+      "payload": {
+        "choices": [
+          { "label": "Put all $12,000 in today", "outcome": "ok", "feedback": "Statistically, lump-sum wins about 2/3 of the time — the market is up more years than down. But you're taking timing risk. If today happens to be the day before a 30% drop, you'll regret it deeply for years." },
+          { "label": "Invest $1,000/month for 12 months regardless of market price", "outcome": "correct", "feedback": "Dollar-cost averaging. You give up some expected return statistically, but you sleep better and can't make the 'worst-timing-ever' mistake. For real humans with real emotions on a first big investment, usually the right call." },
+          { "label": "Wait for the market to drop, then invest", "outcome": "wrong", "feedback": "Nobody reliably predicts drops. While you wait, the market often goes UP, and you watch from the sidelines. Then you chase. 'Time in the market beats timing the market' — a well-worn truth because it's true." }
+        ]
+      }
+    },
+    {
+      "id": "a-5-4",
+      "concept_ids": ["c-5-4"],
+      "type": "decision",
+      "title": "Should a 17-Year-Old Open a Roth IRA?",
+      "intro": "You earn $2,000/year from babysitting. You're 17. A Roth IRA lets you contribute up to your earned income each year. What do you do?",
+      "payload": {
+        "choices": [
+          { "label": "Skip it — $2,000 is more fun as spending money", "outcome": "wrong", "feedback": "True today. But compound it: $2,000 at 17 grows tax-free for 48 years at 8% → about $80,000 at retirement. From ONE year of contributions. You're trading tomorrow's $80,000 for $2,000 of fun today." },
+          { "label": "Contribute $500, keep $1,500 for current spending", "outcome": "ok", "feedback": "Solid compromise. $500/year for 8 years through college, then never touched, grows to ~$100,000 by age 65 at 8%. Doing SOMETHING beats nothing, and the habit of contributing matters more than the amount." },
+          { "label": "Contribute the full $2,000 every year you have earned income", "outcome": "correct", "feedback": "Best answer. $2,000/year for 8 years (age 17-25), invested in an S&P 500 index fund, never touched, grows to ~$420,000 by age 65 — completely tax-free. The math is extreme because compound + tax-free + time. The hardest part is just doing it." }
+        ]
       }
     }
   ]
