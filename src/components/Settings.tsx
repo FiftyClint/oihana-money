@@ -1,7 +1,22 @@
 import { useState } from 'react'
 import { useStore } from '../lib/store'
+import ParentSummary from './ParentSummary'
 
 export default function Settings({ onClose }: { onClose: () => void }) {
+  const [showSummary, setShowSummary] = useState(false)
+  if (showSummary) {
+    return <ParentSummary onClose={() => setShowSummary(false)} />
+  }
+  return <SettingsBody onClose={onClose} onOpenSummary={() => setShowSummary(true)} />
+}
+
+function SettingsBody({
+  onClose,
+  onOpenSummary,
+}: {
+  onClose: () => void
+  onOpenSummary: () => void
+}) {
   const name = useStore((s) => s.name)
   const setName = useStore((s) => s.setName)
   const settings = useStore((s) => s.settings)
@@ -71,6 +86,18 @@ export default function Settings({ onClose }: { onClose: () => void }) {
           <Stat label="Sessions" value={String(sessionCount)} />
         </div>
       </div>
+
+      <button onClick={onOpenSummary} className="card w-full text-left hover:bg-slate-50 transition">
+        <div className="flex items-center justify-between">
+          <div>
+            <div className="font-medium">Parent summary</div>
+            <div className="text-sm text-slate-600 mt-0.5">
+              What she's learned, struggled with, and questions to ask her this week
+            </div>
+          </div>
+          <div className="text-slate-400 text-2xl">›</div>
+        </div>
+      </button>
 
       <div className="card space-y-3">
         <div className="text-sm font-medium text-slate-700">Export / backup</div>
