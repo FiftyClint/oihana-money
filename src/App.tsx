@@ -48,24 +48,24 @@ export default function App() {
 function Nav({ screen, setScreen }: { screen: Screen; setScreen: (s: Screen) => void }) {
   if (screen === 'session') return null // hide nav during a session
   return (
-    <header className="sticky top-0 bg-slate-50/90 backdrop-blur px-4 py-3 flex items-center justify-between border-b border-slate-200">
+    <header className="sticky top-0 bg-slate-50/90 dark:bg-slate-950/90 backdrop-blur px-4 py-3 flex items-center justify-between border-b border-slate-200 dark:border-slate-800 z-10">
       <div className="font-semibold tracking-tight">Money School</div>
       <nav className="flex gap-1 text-sm">
         <button
           onClick={() => setScreen('home')}
-          className={`px-3 py-1.5 rounded-lg ${screen === 'home' ? 'bg-slate-900 text-white' : 'text-slate-600 hover:bg-slate-100'}`}
+          className={`px-3 py-1.5 rounded-lg ${screen === 'home' ? 'bg-slate-900 text-white dark:bg-emerald-600' : 'text-slate-600 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800'}`}
         >
           Home
         </button>
         <button
           onClick={() => setScreen('skilltree')}
-          className={`px-3 py-1.5 rounded-lg ${screen === 'skilltree' ? 'bg-slate-900 text-white' : 'text-slate-600 hover:bg-slate-100'}`}
+          className={`px-3 py-1.5 rounded-lg ${screen === 'skilltree' ? 'bg-slate-900 text-white dark:bg-emerald-600' : 'text-slate-600 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800'}`}
         >
           Skills
         </button>
         <button
           onClick={() => setScreen('settings')}
-          className={`px-3 py-1.5 rounded-lg ${screen === 'settings' ? 'bg-slate-900 text-white' : 'text-slate-600 hover:bg-slate-100'}`}
+          className={`px-3 py-1.5 rounded-lg ${screen === 'settings' ? 'bg-slate-900 text-white dark:bg-emerald-600' : 'text-slate-600 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800'}`}
           aria-label="Settings"
         >
           ⚙

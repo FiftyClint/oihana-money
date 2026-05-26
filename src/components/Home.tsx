@@ -24,18 +24,18 @@ export default function Home({
       <div className="card">
         <div className="flex items-baseline justify-between">
           <div>
-            <div className="text-sm text-slate-500">Hi, {name}</div>
+            <div className="text-sm text-slate-500 dark:text-slate-400">Hi, {name}</div>
             <div className="text-2xl font-bold mt-0.5">
               {streak === 0 ? 'Ready to start?' : `${streak}-day streak 🔥`}
             </div>
           </div>
           {longest > 0 && (
-            <div className="text-right text-xs text-slate-500">
+            <div className="text-right text-xs text-slate-500 dark:text-slate-400">
               Longest: {longest}d
             </div>
           )}
         </div>
-        <div className="mt-4 text-sm text-slate-700">
+        <div className="mt-4 text-sm text-slate-700 dark:text-slate-300">
           {nextConcept ? (
             <>Today you'll unlock <span className="font-semibold">{nextConcept.title}</span>.</>
           ) : dueCount > 0 ? (
@@ -47,7 +47,7 @@ export default function Home({
       </div>
 
       <div className="card">
-        <div className="text-sm font-medium text-slate-700 mb-3">Pick a session length</div>
+        <div className="text-sm font-medium text-slate-700 dark:text-slate-300 mb-3">Pick a session length</div>
         <div className="grid grid-cols-3 gap-2">
           {([5, 8, 15] as const).map((m) => (
             <button
@@ -66,18 +66,18 @@ export default function Home({
 
       <button
         onClick={onOpenTree}
-        className="card w-full text-left hover:bg-slate-50 transition"
+        className="card w-full text-left hover:bg-slate-50 dark:hover:bg-slate-800 transition"
       >
         <div className="flex items-center justify-between">
           <div>
             <div className="font-medium">Skill map</div>
-            <div className="text-sm text-slate-600 mt-0.5">
+            <div className="text-sm text-slate-600 dark:text-slate-400 mt-0.5">
               {masteredCount} / {totalConcepts} concepts mastered
             </div>
           </div>
-          <div className="text-slate-400 text-2xl">›</div>
+          <div className="text-slate-400 dark:text-slate-500 text-2xl">›</div>
         </div>
-        <div className="mt-3 h-2 bg-slate-100 rounded-full overflow-hidden">
+        <div className="mt-3 h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
           <div
             className="h-full bg-emerald-500 transition-all"
             style={{ width: `${(masteredCount / Math.max(1, totalConcepts)) * 100}%` }}

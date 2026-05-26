@@ -40,14 +40,14 @@ export default function SkillTree({ onClose }: { onClose: () => void }) {
         return (
           <div key={track.id} className="space-y-2">
             <div>
-              <div className="text-sm uppercase tracking-wider text-slate-500">
+              <div className="text-sm uppercase tracking-wider text-slate-500 dark:text-slate-400">
                 Track {track.id} · {track.name}
               </div>
-              <div className="text-xs text-slate-500">{track.blurb}</div>
+              <div className="text-xs text-slate-500 dark:text-slate-400">{track.blurb}</div>
             </div>
             <div className="space-y-2">
               {trackConcepts.length === 0 && (
-                <div className="card text-sm text-slate-500 italic">Coming next.</div>
+                <div className="card text-sm text-slate-500 dark:text-slate-400 italic">Coming next.</div>
               )}
               {trackConcepts.map((c) => {
                 const vs = visualState(c)
@@ -62,9 +62,9 @@ export default function SkillTree({ onClose }: { onClose: () => void }) {
                     <NodeDot state={vs} />
                     <div className="flex-1">
                       <div className="font-medium">{c.title}</div>
-                      <div className="text-xs text-slate-500 mt-0.5">{c.summary}</div>
+                      <div className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">{c.summary}</div>
                     </div>
-                    <div className="text-xs text-slate-400">{stateLabel(vs)}</div>
+                    <div className="text-xs text-slate-400 dark:text-slate-500">{stateLabel(vs)}</div>
                   </button>
                 )
               })}
@@ -74,17 +74,17 @@ export default function SkillTree({ onClose }: { onClose: () => void }) {
       })}
 
       {selected && (
-        <div className="fixed inset-0 bg-slate-900/40 z-50 flex items-end sm:items-center justify-center p-4" onClick={() => setSelected(null)}>
-          <div className="bg-white rounded-2xl p-5 max-w-md w-full space-y-3" onClick={(e) => e.stopPropagation()}>
-            <div className="text-xs uppercase tracking-wider text-slate-500">Concept</div>
+        <div className="fixed inset-0 bg-slate-900/60 z-50 flex items-end sm:items-center justify-center p-4" onClick={() => setSelected(null)}>
+          <div className="bg-white dark:bg-slate-900 rounded-2xl p-5 max-w-md w-full space-y-3 border border-transparent dark:border-slate-800" onClick={(e) => e.stopPropagation()}>
+            <div className="text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400">Concept</div>
             <div className="text-xl font-bold">{selected.title}</div>
-            <div className="text-slate-800">{selected.summary}</div>
-            <div className="text-sm text-slate-600 bg-slate-50 rounded-xl p-3">
+            <div className="text-slate-800 dark:text-slate-200">{selected.summary}</div>
+            <div className="text-sm text-slate-700 dark:text-slate-300 bg-slate-50 dark:bg-slate-800 rounded-xl p-3">
               <span className="font-medium">Why it matters: </span>
               {selected.why_it_matters}
             </div>
             {selected.depends_on.length > 0 && (
-              <div className="text-xs text-slate-500">
+              <div className="text-xs text-slate-500 dark:text-slate-400">
                 Unlocks after:{' '}
                 {selected.depends_on
                   .map((d) => concepts.find((c) => c.id === d)?.title ?? d)

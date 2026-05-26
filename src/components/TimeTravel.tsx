@@ -55,9 +55,9 @@ export default function TimeTravel({
 
   return (
     <div className="card space-y-4">
-      <div className="text-xs uppercase tracking-wider text-emerald-700">Apply it</div>
+      <div className="text-xs uppercase tracking-wider text-emerald-700 dark:text-emerald-400">Apply it</div>
       <div className="text-xl font-semibold">{app.title}</div>
-      <div className="text-slate-800 text-sm">{app.intro}</div>
+      <div className="text-slate-800 dark:text-slate-200 text-sm">{app.intro}</div>
 
       <div className="space-y-4">
         <Slider
@@ -101,10 +101,10 @@ export default function TimeTravel({
         />
       </div>
 
-      <div className="bg-slate-50 rounded-xl p-3 space-y-1">
-        <div className="text-sm text-slate-600">At age {endAge}</div>
+      <div className="bg-slate-50 dark:bg-slate-800 rounded-xl p-3 space-y-1">
+        <div className="text-sm text-slate-600 dark:text-slate-400">At age {endAge}</div>
         <div className="text-2xl font-bold tabular-nums">${final.toLocaleString()}</div>
-        <div className="text-xs text-slate-500">
+        <div className="text-xs text-slate-500 dark:text-slate-400">
           You put in ${totalContributed.toLocaleString()}. Growth: ${growth.toLocaleString()}.
         </div>
       </div>
@@ -128,7 +128,7 @@ export default function TimeTravel({
         </ResponsiveContainer>
       </div>
 
-      <div className="text-sm text-slate-700 bg-amber-50 border border-amber-200 rounded-xl p-3">
+      <div className="text-sm text-slate-700 dark:text-slate-200 bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-900/50 rounded-xl p-3">
         Try moving the start age slider. Starting 10 years earlier with the same monthly amount
         usually doubles the final number. That's compounding.
       </div>

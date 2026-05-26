@@ -32,9 +32,9 @@ export default function CardView({
             const isCorrect = i === card.correct_choice_index
             let cls = 'btn-secondary w-full text-left justify-start'
             if (revealed) {
-              if (isCorrect) cls = 'btn w-full text-left justify-start bg-emerald-100 text-emerald-900 border border-emerald-300'
-              else if (isPicked) cls = 'btn w-full text-left justify-start bg-rose-100 text-rose-900 border border-rose-300'
-              else cls = 'btn w-full text-left justify-start bg-white text-slate-500 border border-slate-200'
+              if (isCorrect) cls = 'btn w-full text-left justify-start bg-emerald-100 dark:bg-emerald-900/40 text-emerald-900 dark:text-emerald-200 border border-emerald-300 dark:border-emerald-700'
+              else if (isPicked) cls = 'btn w-full text-left justify-start bg-rose-100 dark:bg-rose-900/40 text-rose-900 dark:text-rose-200 border border-rose-300 dark:border-rose-700'
+              else cls = 'btn w-full text-left justify-start bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-500 border border-slate-200 dark:border-slate-700'
             }
             return (
               <button
@@ -57,9 +57,9 @@ export default function CardView({
               Show answer
             </button>
           ) : (
-            <div className="bg-slate-50 rounded-xl p-3">
-              <div className="text-sm font-medium text-slate-700 mb-1">Answer</div>
-              <div className="text-slate-900">{card.answer}</div>
+            <div className="bg-slate-50 dark:bg-slate-800 rounded-xl p-3">
+              <div className="text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Answer</div>
+              <div className="text-slate-900 dark:text-slate-100">{card.answer}</div>
             </div>
           )}
         </>
@@ -67,18 +67,18 @@ export default function CardView({
 
       {revealed && (
         <>
-          <div className="text-sm text-slate-600 bg-amber-50 border border-amber-200 rounded-xl p-3">
-            <span className="font-medium text-amber-900">Why: </span>
+          <div className="text-sm text-slate-700 dark:text-slate-300 bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-900/50 rounded-xl p-3">
+            <span className="font-medium text-amber-900 dark:text-amber-300">Why: </span>
             {card.explanation}
           </div>
 
           <div>
             <div className="text-xs text-slate-500 mb-2">How did that go?</div>
             <div className="grid grid-cols-4 gap-2">
-              <GradeBtn label="Again" hint="forgot" color="bg-rose-100 text-rose-900" onClick={() => onGrade('again')} />
-              <GradeBtn label="Hard" hint="struggled" color="bg-amber-100 text-amber-900" onClick={() => onGrade('hard')} />
-              <GradeBtn label="Good" hint="got it" color="bg-emerald-100 text-emerald-900" onClick={() => onGrade('good')} />
-              <GradeBtn label="Easy" hint="too easy" color="bg-sky-100 text-sky-900" onClick={() => onGrade('easy')} />
+              <GradeBtn label="Again" hint="forgot" color="bg-rose-100 dark:bg-rose-900/40 text-rose-900 dark:text-rose-200" onClick={() => onGrade('again')} />
+              <GradeBtn label="Hard" hint="struggled" color="bg-amber-100 dark:bg-amber-900/40 text-amber-900 dark:text-amber-200" onClick={() => onGrade('hard')} />
+              <GradeBtn label="Good" hint="got it" color="bg-emerald-100 dark:bg-emerald-900/40 text-emerald-900 dark:text-emerald-200" onClick={() => onGrade('good')} />
+              <GradeBtn label="Easy" hint="too easy" color="bg-sky-100 dark:bg-sky-900/40 text-sky-900 dark:text-sky-200" onClick={() => onGrade('easy')} />
             </div>
           </div>
         </>

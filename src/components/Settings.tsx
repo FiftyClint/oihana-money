@@ -57,7 +57,7 @@ function SettingsBody({
           <input
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="w-full rounded-xl border border-slate-300 px-4 py-2 outline-none focus:border-slate-900"
+            className="w-full rounded-xl border border-slate-300 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100 px-4 py-2 outline-none focus:border-slate-900 dark:focus:border-emerald-500"
           />
         </div>
         <div>
@@ -109,7 +109,7 @@ function SettingsBody({
             <textarea
               readOnly
               value={exportText}
-              className="w-full h-32 text-xs font-mono p-2 rounded-xl border border-slate-300"
+              className="w-full h-32 text-xs font-mono p-2 rounded-xl border border-slate-300 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200"
             />
             <button className="btn-secondary w-full" onClick={handleCopy}>
               Copy
@@ -119,14 +119,14 @@ function SettingsBody({
       </div>
 
       <div className="card space-y-2">
-        <div className="text-sm font-medium text-rose-700">Danger zone</div>
+        <div className="text-sm font-medium text-rose-700 dark:text-rose-400">Danger zone</div>
         {!confirmReset ? (
-          <button className="btn-secondary w-full text-rose-700" onClick={() => setConfirmReset(true)}>
+          <button className="btn-secondary w-full text-rose-700 dark:text-rose-400" onClick={() => setConfirmReset(true)}>
             Reset all progress
           </button>
         ) : (
           <div className="space-y-2">
-            <div className="text-sm text-slate-700">
+            <div className="text-sm text-slate-700 dark:text-slate-300">
               This erases all card progress, streaks, and session history. Your name stays.
             </div>
             <div className="grid grid-cols-2 gap-2">
@@ -152,8 +152,8 @@ function SettingsBody({
 
 function Stat({ label, value }: { label: string; value: string }) {
   return (
-    <div className="bg-slate-50 rounded-xl p-3 text-center">
-      <div className="text-xs text-slate-500">{label}</div>
+    <div className="bg-slate-50 dark:bg-slate-800 rounded-xl p-3 text-center">
+      <div className="text-xs text-slate-500 dark:text-slate-400">{label}</div>
       <div className="text-lg font-bold tabular-nums">{value}</div>
     </div>
   )

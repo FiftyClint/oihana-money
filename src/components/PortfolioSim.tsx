@@ -68,9 +68,9 @@ export default function PortfolioSim({
 
   return (
     <div className="card space-y-4">
-      <div className="text-xs uppercase tracking-wider text-emerald-700">Apply it</div>
+      <div className="text-xs uppercase tracking-wider text-emerald-700 dark:text-emerald-400">Apply it</div>
       <div className="text-xl font-semibold">{app.title}</div>
-      <div className="text-slate-800 text-sm">{app.intro}</div>
+      <div className="text-slate-800 dark:text-slate-200 text-sm">{app.intro}</div>
 
       <div className="space-y-3">
         {payload.instruments.map((inst) => (
@@ -92,7 +92,7 @@ export default function PortfolioSim({
             />
           </div>
         ))}
-        <div className={`text-xs ${valid ? 'text-emerald-700' : 'text-rose-700'}`}>
+        <div className={`text-xs ${valid ? 'text-emerald-700 dark:text-emerald-400' : 'text-rose-700 dark:text-rose-400'}`}>
           Total: {total}% {valid ? '✓' : '(must equal 100%)'}
         </div>
       </div>
@@ -109,12 +109,12 @@ export default function PortfolioSim({
 
       {ran && (
         <>
-          <div className="bg-slate-50 rounded-xl p-3 space-y-1">
-            <div className="text-sm text-slate-600">After 30 years</div>
+          <div className="bg-slate-50 dark:bg-slate-800 rounded-xl p-3 space-y-1">
+            <div className="text-sm text-slate-600 dark:text-slate-400">After 30 years</div>
             <div className="text-2xl font-bold tabular-nums">
               ${finalValue.toLocaleString()}
             </div>
-            <div className="text-xs text-slate-500">
+            <div className="text-xs text-slate-500 dark:text-slate-400">
               From ${totalContributions.toLocaleString()} of your money. The rest is growth.
             </div>
           </div>
@@ -152,7 +152,7 @@ export default function PortfolioSim({
             </ResponsiveContainer>
           </div>
 
-          <div className="text-sm text-slate-700 bg-amber-50 border border-amber-200 rounded-xl p-3">
+          <div className="text-sm text-slate-700 dark:text-slate-200 bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-900/50 rounded-xl p-3">
             {pct.stocks >= 70
               ? `Heavy on stocks — that's right for a 30-year horizon. Notice the dips around 2000, 2008, and 2022. They recovered.`
               : pct.stocks >= 50

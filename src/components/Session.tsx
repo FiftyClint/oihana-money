@@ -83,17 +83,17 @@ export default function Session({
         totalCards={totalCards}
       >
         <div className="card space-y-4">
-          <div className="text-xs uppercase tracking-wider text-slate-500">
+          <div className="text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400">
             {minutes}-minute session
           </div>
           <div className="text-2xl font-semibold leading-snug">
             {step.concept ? (
-              <>Today: <span className="text-emerald-600">{step.concept.title}</span></>
+              <>Today: <span className="text-emerald-600 dark:text-emerald-400">{step.concept.title}</span></>
             ) : (
               <>Today: review what you've learned.</>
             )}
           </div>
-          <div className="text-slate-700">
+          <div className="text-slate-700 dark:text-slate-300">
             Tap <span className="font-medium">Start</span> when you're ready. You can quit any time.
           </div>
           <button className="btn-primary w-full" onClick={advance}>Start</button>
@@ -127,11 +127,11 @@ export default function Session({
     return (
       <Frame progressPct={progressPct} onExit={onExit} cardsDone={cardsDone} totalCards={totalCards}>
         <div className="card space-y-3">
-          <div className="text-xs uppercase tracking-wider text-emerald-700">New concept</div>
+          <div className="text-xs uppercase tracking-wider text-emerald-700 dark:text-emerald-400">New concept</div>
           <div className="text-2xl font-semibold leading-snug">{step.concept.title}</div>
-          <div className="text-slate-800 leading-relaxed">{step.concept.summary}</div>
-          <div className="text-sm text-slate-600 bg-slate-50 rounded-xl p-3">
-            <span className="font-medium text-slate-700">Why it matters: </span>
+          <div className="text-slate-800 dark:text-slate-200 leading-relaxed">{step.concept.summary}</div>
+          <div className="text-sm text-slate-700 dark:text-slate-300 bg-slate-50 dark:bg-slate-800 rounded-xl p-3">
+            <span className="font-medium text-slate-700 dark:text-slate-200">Why it matters: </span>
             {step.concept.why_it_matters}
           </div>
           <button
@@ -222,18 +222,18 @@ function Frame({
       <div className="flex items-center gap-3">
         <button
           onClick={onExit}
-          className="text-slate-500 px-2 py-1 hover:bg-slate-100 rounded"
+          className="text-slate-500 dark:text-slate-400 px-2 py-1 hover:bg-slate-100 dark:hover:bg-slate-800 rounded"
           aria-label="Exit session"
         >
           ✕
         </button>
-        <div className="flex-1 h-2 bg-slate-200 rounded-full overflow-hidden">
+        <div className="flex-1 h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
           <div
             className="h-full bg-emerald-500 transition-all duration-300"
             style={{ width: `${progressPct}%` }}
           />
         </div>
-        <div className="text-xs text-slate-500 tabular-nums">
+        <div className="text-xs text-slate-500 dark:text-slate-400 tabular-nums">
           {cardsDone}/{totalCards}
         </div>
       </div>
